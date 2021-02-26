@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi AS APR
 RUN cd /tmp \
-	&& curl http://apache.communilink.net/tomcat/tomcat-connectors/native/1.2.25/source/tomcat-native-1.2.25-src.tar.gz | tar -xzf - \
+	&& curl https://mirror-hk.koddos.net/apache/tomcat/tomcat-connectors/native/1.2.26/source/tomcat-native-1.2.26-src.tar.gz | tar -xzf - \
 	&& cd /tmp/tomcat*/native \
 	&& rpm -Uvh https://cdn.azul.com/zulu/bin/zulu-repo-1.0.0-1.noarch.rpm \
 	&& yum --assumeyes install zulu11-jdk-headless apr-devel openssl-devel gcc make redhat-rpm-config \
